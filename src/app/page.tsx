@@ -31,12 +31,18 @@ export default function Home() {
                 className="object-contain brightness-0 invert"
               />
             </Link>
-            <div className="hidden md:flex items-center space-x-12">
+            <div className="hidden md:flex items-center space-x-10">
               <Link href="/music" className="nav-link text-white">
                 Music
               </Link>
               <Link href="/videos" className="nav-link text-white">
                 Videos
+              </Link>
+              <Link href="/photos" className="nav-link text-white">
+                Photos
+              </Link>
+              <Link href="/news" className="nav-link text-white">
+                News
               </Link>
               <Link href="/about" className="nav-link text-white">
                 About

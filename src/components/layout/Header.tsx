@@ -18,12 +18,18 @@ export default function Header() {
           </Link>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-12">
+          <div className="hidden md:flex items-center space-x-10">
             <Link href="/music" className="nav-link text-white hover:text-[#C4A484]">
               Music
             </Link>
             <Link href="/videos" className="nav-link text-white hover:text-[#C4A484]">
               Videos
+            </Link>
+            <Link href="/photos" className="nav-link text-white hover:text-[#C4A484]">
+              Photos
+            </Link>
+            <Link href="/news" className="nav-link text-white hover:text-[#C4A484]">
+              News
             </Link>
             <Link href="/about" className="nav-link text-white hover:text-[#C4A484]">
               About

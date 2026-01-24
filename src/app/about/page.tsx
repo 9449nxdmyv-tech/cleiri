@@ -85,11 +85,32 @@ export default async function AboutPage() {
       <section className="py-20 px-6 bg-[#2C2C2C] text-white mt-20">
         <div className="container mx-auto max-w-4xl text-center">
           <p className="section-subtitle text-[#C4A484]">Recognition</p>
-          <h2 className="text-3xl font-serif mb-8">Awards & Achievements</h2>
-          <div className="max-w-xl mx-auto">
-            <div className="py-6 border-b border-gray-700">
-              <p className="text-[#C4A484] text-sm uppercase tracking-widest mb-2">2021</p>
-              <p className="text-lg">Brownsville Music Legacy Award</p>
+          <h2 className="text-3xl font-serif mb-12">Awards & Achievements</h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto text-left">
+            <div className="bg-white/5 rounded-sm p-6 border border-white/10">
+              <p className="text-[#C4A484] text-sm uppercase tracking-widest mb-3">2021 - 2023</p>
+              <h3 className="text-xl font-serif mb-2">Brownsville Music Legacy Awards</h3>
+              <p className="text-gray-400 text-sm">Three consecutive years of recognition for contributions to regional music.</p>
+            </div>
+            <div className="bg-white/5 rounded-sm p-6 border border-white/10">
+              <p className="text-[#C4A484] text-sm uppercase tracking-widest mb-3">2021 - 2023</p>
+              <h3 className="text-xl font-serif mb-2">Guadalupe Awards - San Antonio</h3>
+              <p className="text-gray-400 text-sm">Honored for excellence in Latin music and cultural contribution.</p>
+            </div>
+            <div className="bg-white/5 rounded-sm p-6 border border-white/10">
+              <p className="text-[#C4A484] text-sm uppercase tracking-widest mb-3">October 2022</p>
+              <h3 className="text-xl font-serif mb-2">Best Female Vocalist Nominee</h3>
+              <p className="text-gray-400 text-sm">Nominated at the Guadalupe Awards for vocal excellence.</p>
+            </div>
+            <div className="bg-white/5 rounded-sm p-6 border border-white/10">
+              <p className="text-[#C4A484] text-sm uppercase tracking-widest mb-3">2022</p>
+              <h3 className="text-xl font-serif mb-2">Rising Star - Voyage Magazine</h3>
+              <p className="text-gray-400 text-sm">Featured as one of San Antonio&apos;s rising stars in arts and entertainment.</p>
+            </div>
+            <div className="bg-white/5 rounded-sm p-6 border border-white/10 md:col-span-2">
+              <p className="text-[#C4A484] text-sm uppercase tracking-widest mb-3">2024</p>
+              <h3 className="text-xl font-serif mb-2">Latin Grammy Awards Invitation</h3>
+              <p className="text-gray-400 text-sm">Received an official invitation to attend the prestigious Latin Grammy Awards ceremony.</p>
             </div>
           </div>
         </div>

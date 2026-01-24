@@ -1,11 +1,11 @@
 import Image from 'next/image';
-import { FaSpotify, FaMusic, FaLink } from 'react-icons/fa';
+import { FaSpotify, FaMusic, FaLink, FaChartLine } from 'react-icons/fa';
 import { BsMusicNote } from 'react-icons/bs';
 
 const musicPlatforms = [
   {
     name: 'Spotify',
-    url: 'https://open.spotify.com/track/42Lb5g0ZbSOeq9w6N0Jl7A?utm_medium=share&utm_source=linktree',
+    url: 'https://open.spotify.com/track/42Lb5g0ZbSOeq9w6N0Jl7A',
     icon: <FaSpotify />,
   },
   {
@@ -22,6 +22,72 @@ const musicPlatforms = [
     name: 'More Platforms',
     url: 'https://tr.ee/Ej2ao5KUdJ',
     icon: <FaLink />,
+  },
+];
+
+const discography = [
+  {
+    title: 'Furia',
+    year: '2025',
+    type: 'Single',
+    description: 'The latest release showcasing raw emotion and powerful vocals.',
+  },
+  {
+    title: 'Si Dios Me Quita La Vida',
+    year: '2024',
+    type: 'Single',
+    description: 'A musical journey through ancestral roots honoring traditional Mexican music.',
+  },
+  {
+    title: 'Estoy Pensando En Ti',
+    year: '2023',
+    type: 'Single',
+    description: 'An emotion-filled journey produced by CHR Records.',
+  },
+  {
+    title: 'La Distancia',
+    year: '2022',
+    type: 'Single',
+    description: 'International Spanish balada that topped multiple charts.',
+  },
+  {
+    title: 'Besos De Miel',
+    year: '2021',
+    type: 'Single',
+    description: 'Produced by Grammy-winning producer Alex Espinoza. Featured in the film "Rooster".',
+  },
+  {
+    title: 'Ilusiones',
+    year: '2021',
+    type: 'Single',
+    description: 'Grammy-produced track featured in the Mexican film "Rooster".',
+  },
+];
+
+const chartAchievements = [
+  {
+    song: 'La Distancia',
+    achievement: '#1',
+    chart: 'Mas Chingon Radio',
+    detail: 'Top 50 Songs of the Week',
+  },
+  {
+    song: 'La Distancia',
+    achievement: '#1',
+    chart: 'Ladies of Tejano',
+    detail: 'November 2022',
+  },
+  {
+    song: 'La Distancia',
+    achievement: 'Top 20',
+    chart: 'Tejano Radio Countdown',
+    detail: 'National Syndication',
+  },
+  {
+    song: 'Estoy Pensando En Ti',
+    achievement: 'Top 50',
+    chart: 'Tejano Nation Charts',
+    detail: 'Multiple weeks',
   },
 ];
 
@@ -105,8 +171,62 @@ export default function MusicPage() {
         </div>
       </section>
 
-      {/* SoundCloud Player */}
+      {/* On The Charts */}
+      <section className="py-20 px-6 bg-[#2C2C2C] text-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <p className="section-subtitle text-[#C4A484]">Chart Success</p>
+            <h2 className="text-3xl md:text-4xl font-serif">On The Charts</h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {chartAchievements.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white/5 backdrop-blur rounded-sm p-6 text-center border border-white/10 hover:border-[#C4A484]/50 transition-colors"
+              >
+                <div className="text-4xl font-serif text-[#C4A484] mb-2">{item.achievement}</div>
+                <div className="text-white font-medium mb-1">{item.chart}</div>
+                <div className="text-gray-400 text-sm mb-3">{item.detail}</div>
+                <div className="text-xs uppercase tracking-widest text-gray-500">{item.song}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Discography */}
       <section className="py-20 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-16">
+            <p className="section-subtitle">Catalog</p>
+            <h2 className="text-3xl font-serif text-[#2C2C2C]">Discography</h2>
+          </div>
+          <div className="space-y-6">
+            {discography.map((release, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-6 p-6 bg-white rounded-sm shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="text-[#C4A484] font-serif text-2xl font-bold min-w-[60px]">
+                  {release.year}
+                </div>
+                <div className="flex-grow">
+                  <div className="flex items-center gap-3 mb-2">
+                    <h3 className="font-serif text-xl text-[#2C2C2C]">{release.title}</h3>
+                    <span className="text-xs uppercase tracking-widest text-[#C4A484] bg-[#C4A484]/10 px-2 py-1 rounded-sm">
+                      {release.type}
+                    </span>
+                  </div>
+                  <p className="text-[#6B6B6B] text-sm">{release.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SoundCloud Player */}
+      <section className="py-20 px-6 bg-white">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <p className="section-subtitle">Stream</p>
@@ -126,10 +246,10 @@ export default function MusicPage() {
       </section>
 
       {/* Live Performances */}
-      <section className="py-20 px-6 bg-[#2C2C2C] text-white">
+      <section className="py-20 px-6">
         <div className="container mx-auto max-w-4xl text-center">
-          <p className="section-subtitle text-[#C4A484]">Experience</p>
-          <h2 className="text-3xl font-serif mb-12">Live Repertoire</h2>
+          <p className="section-subtitle">Experience</p>
+          <h2 className="text-3xl font-serif text-[#2C2C2C] mb-12">Live Repertoire</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
             {[
               'About Damn Time',
@@ -146,7 +266,7 @@ export default function MusicPage() {
             ].map((song) => (
               <div
                 key={song}
-                className="py-3 px-4 border border-gray-700 rounded-sm text-gray-300"
+                className="py-3 px-4 border border-[#E5E0D8] rounded-sm text-[#6B6B6B] hover:border-[#C4A484] hover:text-[#2C2C2C] transition-colors"
               >
                 {song}
               </div>
@@ -156,7 +276,7 @@ export default function MusicPage() {
       </section>
 
       {/* Press Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 bg-white">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <p className="section-subtitle">Featured In</p>
@@ -169,7 +289,7 @@ export default function MusicPage() {
                 href={article.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group block p-8 bg-white rounded-sm shadow-sm hover:shadow-lg transition-shadow duration-300"
+                className="group block p-8 bg-[#FAF7F2] rounded-sm hover:shadow-lg transition-shadow duration-300"
               >
                 <p className="text-xs uppercase tracking-widest text-[#C4A484] mb-3">
                   {article.source}

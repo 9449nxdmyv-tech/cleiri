@@ -24,6 +24,12 @@ export default function Footer() {
               <Link href="/videos" className="text-gray-400 hover:text-white transition-colors text-sm">
                 Videos
               </Link>
+              <Link href="/photos" className="text-gray-400 hover:text-white transition-colors text-sm">
+                Photos
+              </Link>
+              <Link href="/news" className="text-gray-400 hover:text-white transition-colors text-sm">
+                News
+              </Link>
               <Link href="/about" className="text-gray-400 hover:text-white transition-colors text-sm">
                 About
               </Link>
