@@ -1,27 +1,122 @@
 @import "tailwindcss";
 
-@layer components {
-  /* Custom styles for Prose content */
-  .prose p {
-    margin-bottom: 1em; /* Ensures consistent paragraph spacing */
+@layer base {
+  :root {
+    --color-cream: #FAF7F2;
+    --color-rose: #C4A484;
+    --color-rose-light: #D4B896;
+    --color-charcoal: #2C2C2C;
+    --color-warm-gray: #6B6B6B;
   }
 
-  .prose blockquote {
-    font-family: var(--font-playfair); /* Use the serif font for quotes */
-    font-size: 1.5em; /* Larger font size */
-    font-style: italic;
-    border-left: 4px solid theme('colors.purple.800'); /* Accent color border */
-    padding-left: 1em;
-    margin-left: 0;
-    color: theme('colors.gray.700'); /* Slightly darker or different color */
+  html {
+    font-family: var(--font-lato);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-charcoal);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair);
   }
 }
 
-@layer base {
-  html {
-    font-family: var(--font-lato);
+@layer components {
+  .prose p {
+    margin-bottom: 1.25em;
+    line-height: 1.8;
   }
-  h1, h2, h3, h4, h5, h6 {
+
+  .prose blockquote {
     font-family: var(--font-playfair);
+    font-size: 1.5em;
+    font-style: italic;
+    border-left: 3px solid var(--color-rose);
+    padding-left: 1.5em;
+    margin-left: 0;
+    color: var(--color-warm-gray);
+  }
+
+  .btn-primary {
+    @apply inline-block px-8 py-3 text-sm tracking-widest uppercase font-medium transition-all duration-300;
+    background-color: var(--color-charcoal);
+    color: white;
+    letter-spacing: 0.15em;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-rose);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    @apply inline-block px-8 py-3 text-sm tracking-widest uppercase font-medium transition-all duration-300 border-2;
+    border-color: var(--color-charcoal);
+    color: var(--color-charcoal);
+    letter-spacing: 0.15em;
+    background: transparent;
+  }
+
+  .btn-outline:hover {
+    background-color: var(--color-charcoal);
+    color: white;
+  }
+
+  .nav-link {
+    @apply relative text-sm tracking-widest uppercase transition-colors duration-300;
+    letter-spacing: 0.2em;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-serif mb-4;
+    letter-spacing: 0.05em;
+  }
+
+  .section-subtitle {
+    @apply text-sm uppercase tracking-widest mb-8;
+    color: var(--color-rose);
+    letter-spacing: 0.2em;
+  }
+
+  .fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
