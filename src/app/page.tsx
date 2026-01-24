@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaInstagram, FaYoutube, FaSpotify, FaFacebookF, FaTiktok } from 'react-icons/fa';
 
 export default function Home() {
 
@@ -48,3 +47,5 @@ export default function Home() {
         </div>
       </div>
     </div>
+  );
+}

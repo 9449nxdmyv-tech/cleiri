@@ -92,14 +92,14 @@ export default function MusicPage() {
           <ul className="list-none p-0 m-0 text-lg font-sans">
             <li className="mb-2">About Damn Time</li>
             <li className="mb-2">Carnaval</li>
-            <li className="mb-2">Don't Start Now</li>
+            <li className="mb-2">Don&apos;t Start Now</li>
             <li className="mb-2">Feel Like A Woman</li>
             <li className="mb-2">Give It To Me Baby</li>
             <li className="mb-2">Good Times</li>
             <li className="mb-2">Hell A Good</li>
             <li className="mb-2">Joey</li>
             <li className="mb-2">Locked Out Of Heaven</li>
-            <li className="mb-2">Please Don't Stop The Music</li>
+            <li className="mb-2">Please Don&apos;t Stop The Music</li>
             <li className="mb-2">Tennessee Whiskey</li>
           </ul>
         </div>

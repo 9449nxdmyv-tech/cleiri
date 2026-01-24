@@ -1,6 +1,13 @@
 import React from 'react';
 
-const SpotifyIcon = ({ className, width = 24, height = 24, fill = 'currentColor', ...props }) => {
+interface SpotifyIconProps extends React.SVGProps<SVGSVGElement> {
+  className?: string;
+  width?: number;
+  height?: number;
+  fill?: string;
+}
+
+const SpotifyIcon: React.FC<SpotifyIconProps> = ({ className, width = 24, height = 24, fill = 'currentColor', ...props }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

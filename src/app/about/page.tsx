@@ -5,7 +5,7 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 
-async function getAboutContent() {
+async function getAboutContent(): Promise<{ contentHtml: string; title: string }> {
   const contentDir = path.join(process.cwd(), 'content');
   const fullPath = path.join(contentDir, 'about.md');
   const fileContents = fs.readFileSync(fullPath, 'utf8');
@@ -19,7 +19,7 @@ async function getAboutContent() {
 
   return {
     contentHtml,
-    ...matterResult.data,
+    title: matterResult.data.title as string,
   };
 }
 
@@ -28,7 +28,7 @@ export default async function AboutPage() {
 
   return (
     <div className="container mx-auto px-6 py-24 max-w-5xl">
-      <h1 className="text-5xl font-serif font-bold mb-12 text-center">{title as string}</h1>
+      <h1 className="text-5xl font-serif font-bold mb-12 text-center">{title}</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         {/* Text Content - Left Column */}
         <div
