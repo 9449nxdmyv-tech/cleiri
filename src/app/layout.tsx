@@ -1,6 +1,6 @@
 'use client';
 
-import { Playfair_Display, Lato } from "next/font/google";
+import { Playfair_Display, Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -12,10 +12,10 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
 });
 
-const lato = Lato({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
-  variable: "--font-lato",
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  variable: "--font-montserrat",
 });
 
 export default function RootLayout({
@@ -29,11 +29,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Cleiri | Singer &amp; Songwriter</title>
+        <title>Cleiri Quezada | Singer &amp; Songwriter</title>
         <meta name="description" content="Award-winning artist from the Rio Grande Valley, blending Spanish ballads with the soulful sound of mariachi." />
       </head>
       <body
-        className={`${playfair.variable} ${lato.variable} bg-[#FAF7F2] font-sans flex flex-col min-h-screen antialiased`}
+        className={`${playfair.variable} ${montserrat.variable} bg-[#E7DBCB] font-sans flex flex-col min-h-screen antialiased`}
       >
         {!isHomePage && <Header />}
         <main className="flex-grow">{children}</main>

@@ -45,20 +45,20 @@ export default function PhotosPage() {
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
 
   return (
-    <div className="bg-[#FAF7F2] min-h-screen">
+    <div className="bg-[#E7DBCB] min-h-screen">
       {/* Hero Section */}
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-4xl text-center">
-          <p className="section-subtitle">Gallery</p>
-          <h1 className="section-title text-[#2C2C2C]">Photos</h1>
-          <p className="text-[#6B6B6B] text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="section-subtitle text-[#036B59]">Gallery</p>
+          <h1 className="section-title text-[#2D282C]">Photos</h1>
+          <p className="text-[#555456] text-lg max-w-2xl mx-auto leading-relaxed">
             A visual journey through performances, photoshoots, and behind-the-scenes moments.
           </p>
         </div>
       </section>
 
-      {/* Photo Grid */}
-      <section className="py-12 px-6">
+      {/* Photo Grid - CHARCOAL background */}
+      <section className="py-12 px-6 bg-[#2D282C]">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {photos.map((photo, index) => (
@@ -74,9 +74,9 @@ export default function PhotosPage() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   unoptimized={photo.src.startsWith('http')}
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-[#036B59]/0 group-hover:bg-[#036B59]/30 transition-colors duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <span className="text-white text-xs uppercase tracking-widest bg-black/50 px-3 py-1 rounded-sm">
+                  <span className="text-white text-xs uppercase tracking-widest bg-[#036B59]/80 px-3 py-1 rounded-sm">
                     {photo.category}
                   </span>
                 </div>
@@ -89,11 +89,11 @@ export default function PhotosPage() {
       {/* Lightbox */}
       {selectedPhoto && (
         <div
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-[#0A0A0A]/95 z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedPhoto(null)}
         >
           <button
-            className="absolute top-6 right-6 text-white text-4xl hover:text-[#C4A484] transition-colors"
+            className="absolute top-6 right-6 text-white text-4xl hover:text-[#2BBCB5] transition-colors"
             onClick={() => setSelectedPhoto(null)}
           >
             &times;
@@ -110,24 +110,25 @@ export default function PhotosPage() {
         </div>
       )}
 
-      {/* Instagram CTA */}
-      <section className="py-20 px-6">
+      {/* Instagram CTA - GREEN accent */}
+      <section className="py-20 px-6 bg-[#036B59] text-white">
         <div className="container mx-auto max-w-2xl text-center">
-          <p className="section-subtitle">More Photos</p>
-          <h2 className="text-3xl font-serif mb-6 text-[#2C2C2C]">Follow on Instagram</h2>
-          <p className="text-[#6B6B6B] mb-8">
+          <p className="section-subtitle text-[#FFBD17]">More Photos</p>
+          <h2 className="text-3xl font-serif mb-6">Follow on Instagram</h2>
+          <p className="text-white/80 mb-8">
             See the latest photos, stories, and behind-the-scenes content.
           </p>
           <a
             href="https://www.instagram.com/cleiriquezada"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary"
+            className="inline-block px-8 py-3 text-sm tracking-widest uppercase font-medium transition-all duration-300 bg-white text-[#036B59] hover:bg-[#FFBD17] hover:text-[#2D282C]"
           >
             @cleiriquezada
           </a>
         </div>
       </section>
+
     </div>
   );
 }

@@ -2,20 +2,28 @@
 
 @layer base {
   :root {
-    --color-cream: #FAF7F2;
-    --color-rose: #C4A484;
-    --color-rose-light: #D4B896;
-    --color-charcoal: #2C2C2C;
-    --color-warm-gray: #6B6B6B;
+    /* Brand Colors from Branding Guide */
+    --color-bone: #E7DBCB;
+    --color-charcoal: #2D282C;
+    --color-charcoal-dark: #252828;
+    --color-off-white: #F7FBF8;
+    --color-black: #0A0A0A;
+    --color-gray: #555456;
+
+    /* Accent Colors */
+    --color-red: #A30302;
+    --color-green: #036B59;
+    --color-teal: #2BBCB5;
+    --color-gold: #FFBD17;
   }
 
   html {
-    font-family: var(--font-lato);
+    font-family: var(--font-montserrat);
     scroll-behavior: smooth;
   }
 
   body {
-    background-color: var(--color-cream);
+    background-color: var(--color-bone);
     color: var(--color-charcoal);
   }
 
@@ -34,21 +42,21 @@
     font-family: var(--font-playfair);
     font-size: 1.5em;
     font-style: italic;
-    border-left: 3px solid var(--color-rose);
+    border-left: 3px solid var(--color-green);
     padding-left: 1.5em;
     margin-left: 0;
-    color: var(--color-warm-gray);
+    color: var(--color-gray);
   }
 
   .btn-primary {
     @apply inline-block px-8 py-3 text-sm tracking-widest uppercase font-medium transition-all duration-300;
     background-color: var(--color-charcoal);
-    color: white;
+    color: var(--color-off-white);
     letter-spacing: 0.15em;
   }
 
   .btn-primary:hover {
-    background-color: var(--color-rose);
+    background-color: var(--color-green);
     transform: translateY(-2px);
   }
 
@@ -62,7 +70,31 @@
 
   .btn-outline:hover {
     background-color: var(--color-charcoal);
-    color: white;
+    color: var(--color-off-white);
+  }
+
+  .btn-accent-red {
+    @apply inline-block px-8 py-3 text-sm tracking-widest uppercase font-medium transition-all duration-300;
+    background-color: var(--color-red);
+    color: var(--color-off-white);
+    letter-spacing: 0.15em;
+  }
+
+  .btn-accent-red:hover {
+    background-color: var(--color-charcoal);
+    transform: translateY(-2px);
+  }
+
+  .btn-accent-green {
+    @apply inline-block px-8 py-3 text-sm tracking-widest uppercase font-medium transition-all duration-300;
+    background-color: var(--color-green);
+    color: var(--color-off-white);
+    letter-spacing: 0.15em;
+  }
+
+  .btn-accent-green:hover {
+    background-color: var(--color-charcoal);
+    transform: translateY(-2px);
   }
 
   .nav-link {
@@ -92,8 +124,40 @@
 
   .section-subtitle {
     @apply text-sm uppercase tracking-widest mb-8;
-    color: var(--color-rose);
+    color: var(--color-green);
     letter-spacing: 0.2em;
+  }
+
+  .accent-red {
+    color: var(--color-red);
+  }
+
+  .accent-green {
+    color: var(--color-green);
+  }
+
+  .accent-teal {
+    color: var(--color-teal);
+  }
+
+  .accent-gold {
+    color: var(--color-gold);
+  }
+
+  .bg-brand-charcoal {
+    background-color: var(--color-charcoal);
+  }
+
+  .bg-brand-bone {
+    background-color: var(--color-bone);
+  }
+
+  .bg-brand-green {
+    background-color: var(--color-green);
+  }
+
+  .bg-brand-red {
+    background-color: var(--color-red);
   }
 
   .fade-in {

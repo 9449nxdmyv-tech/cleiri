@@ -65,19 +65,19 @@ export default function NewsPage() {
   const otherNews = newsItems.filter(item => !item.featured);
 
   return (
-    <div className="bg-[#FAF7F2] min-h-screen">
+    <div className="bg-[#E7DBCB] min-h-screen">
       {/* Hero Section */}
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-4xl text-center">
-          <p className="section-subtitle">Latest Updates</p>
-          <h1 className="section-title text-[#2C2C2C]">News</h1>
-          <p className="text-[#6B6B6B] text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="section-subtitle text-[#A30302]">Latest Updates</p>
+          <h1 className="section-title text-[#2D282C]">News</h1>
+          <p className="text-[#555456] text-lg max-w-2xl mx-auto leading-relaxed">
             Stay up to date with Cleiri&apos;s latest releases, performances, awards, and media features.
           </p>
         </div>
       </section>
 
-      {/* Featured News */}
+      {/* Featured News - RED accent */}
       {featuredNews && (
         <section className="py-12 px-6">
           <div className="container mx-auto max-w-6xl">
@@ -85,7 +85,7 @@ export default function NewsPage() {
               href={featuredNews.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block bg-[#2C2C2C] rounded-sm overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+              className="group block bg-[#A30302] rounded-sm overflow-hidden hover:shadow-2xl transition-shadow duration-300"
             >
               <div className="grid md:grid-cols-2">
                 <div className="relative aspect-video md:aspect-auto">
@@ -96,18 +96,18 @@ export default function NewsPage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="p-8 md:p-12 flex flex-col justify-center">
+                <div className="p-8 md:p-12 flex flex-col justify-center text-white">
                   <div className="flex items-center gap-4 mb-4">
-                    <span className="text-[#C4A484] text-xs uppercase tracking-widest">
+                    <span className="text-[#FFBD17] text-xs uppercase tracking-widest">
                       {featuredNews.category}
                     </span>
-                    <span className="text-gray-500 text-xs">{featuredNews.date}</span>
+                    <span className="text-white/60 text-xs">{featuredNews.date}</span>
                   </div>
-                  <h2 className="font-serif text-2xl md:text-3xl text-white mb-4 group-hover:text-[#C4A484] transition-colors">
+                  <h2 className="font-serif text-2xl md:text-3xl mb-4 group-hover:text-[#FFBD17] transition-colors">
                     {featuredNews.title}
                   </h2>
-                  <p className="text-gray-400 mb-6">{featuredNews.description}</p>
-                  <span className="text-[#C4A484] text-sm uppercase tracking-widest">
+                  <p className="text-white/80 mb-6">{featuredNews.description}</p>
+                  <span className="text-[#FFBD17] text-sm uppercase tracking-widest">
                     Read on {featuredNews.source} &rarr;
                   </span>
                 </div>
@@ -127,21 +127,21 @@ export default function NewsPage() {
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group block bg-white rounded-sm p-8 shadow-sm hover:shadow-lg transition-all duration-300"
+                className="group block bg-[#F7FBF8] rounded-sm p-8 shadow-sm hover:shadow-lg transition-all duration-300 border-l-4 border-transparent hover:border-[#A30302]"
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <span className="text-[#C4A484] text-xs uppercase tracking-widest">
+                  <span className="text-[#A30302] text-xs uppercase tracking-widest">
                     {item.category}
                   </span>
-                  <span className="text-gray-400 text-xs">{item.date}</span>
+                  <span className="text-[#555456] text-xs">{item.date}</span>
                 </div>
-                <h3 className="font-serif text-xl text-[#2C2C2C] mb-3 group-hover:text-[#C4A484] transition-colors leading-relaxed">
+                <h3 className="font-serif text-xl text-[#2D282C] mb-3 group-hover:text-[#A30302] transition-colors leading-relaxed">
                   {item.title}
                 </h3>
-                <p className="text-[#6B6B6B] text-sm mb-4 leading-relaxed">
+                <p className="text-[#555456] text-sm mb-4 leading-relaxed">
                   {item.description}
                 </p>
-                <span className="text-sm text-[#6B6B6B] group-hover:text-[#2C2C2C] transition-colors">
+                <span className="text-sm text-[#A30302] group-hover:text-[#2D282C] transition-colors">
                   {item.source} &rarr;
                 </span>
               </a>
@@ -149,6 +149,7 @@ export default function NewsPage() {
           </div>
         </div>
       </section>
+
     </div>
   );
 }
