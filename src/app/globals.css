@@ -2,19 +2,15 @@
 
 @layer base {
   :root {
-    /* Brand Colors from Branding Guide */
+    /* Brand Colors — Emerald Green Palette */
+    --color-emerald: #064E3B;
+    --color-emerald-light: #047857;
+    --color-emerald-accent: #059669;
     --color-bone: #E7DBCB;
-    --color-charcoal: #2D282C;
-    --color-charcoal-dark: #252828;
-    --color-off-white: #F7FBF8;
-    --color-black: #0A0A0A;
-    --color-gray: #555456;
-
-    /* Accent Colors */
-    --color-red: #A30302;
-    --color-green: #036B59;
-    --color-teal: #2BBCB5;
-    --color-gold: #FFBD17;
+    --color-bone-light: #F2EDE6;
+    --color-black: #1A1A1A;
+    --color-charcoal: #2D2D2D;
+    --color-gold: #C9A84C;
   }
 
   html {
@@ -24,7 +20,7 @@
 
   body {
     background-color: var(--color-bone);
-    color: var(--color-charcoal);
+    color: var(--color-black);
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -33,6 +29,7 @@
 }
 
 @layer components {
+  /* Prose (markdown content) */
   .prose p {
     margin-bottom: 1.25em;
     line-height: 1.8;
@@ -42,61 +39,52 @@
     font-family: var(--font-playfair);
     font-size: 1.5em;
     font-style: italic;
-    border-left: 3px solid var(--color-green);
+    border-left: 3px solid var(--color-emerald);
     padding-left: 1.5em;
     margin-left: 0;
-    color: var(--color-gray);
+    color: var(--color-charcoal);
   }
 
+  /* Unified Buttons */
   .btn-primary {
     @apply inline-block px-8 py-3 text-sm tracking-widest uppercase font-medium transition-all duration-300;
-    background-color: var(--color-charcoal);
-    color: var(--color-off-white);
+    background-color: var(--color-emerald);
+    color: var(--color-bone);
     letter-spacing: 0.15em;
   }
 
   .btn-primary:hover {
-    background-color: var(--color-green);
-    transform: translateY(-2px);
+    background-color: var(--color-emerald-light);
+    transform: translateY(-1px);
   }
 
   .btn-outline {
     @apply inline-block px-8 py-3 text-sm tracking-widest uppercase font-medium transition-all duration-300 border-2;
-    border-color: var(--color-charcoal);
-    color: var(--color-charcoal);
+    border-color: var(--color-bone);
+    color: var(--color-bone);
     letter-spacing: 0.15em;
     background: transparent;
   }
 
   .btn-outline:hover {
-    background-color: var(--color-charcoal);
-    color: var(--color-off-white);
+    background-color: var(--color-bone);
+    color: var(--color-emerald);
   }
 
-  .btn-accent-red {
-    @apply inline-block px-8 py-3 text-sm tracking-widest uppercase font-medium transition-all duration-300;
-    background-color: var(--color-red);
-    color: var(--color-off-white);
+  .btn-secondary {
+    @apply inline-block px-8 py-3 text-sm tracking-widest uppercase font-medium transition-all duration-300 border-2;
+    border-color: var(--color-emerald);
+    color: var(--color-emerald);
     letter-spacing: 0.15em;
+    background: transparent;
   }
 
-  .btn-accent-red:hover {
-    background-color: var(--color-charcoal);
-    transform: translateY(-2px);
+  .btn-secondary:hover {
+    background-color: var(--color-emerald);
+    color: var(--color-bone);
   }
 
-  .btn-accent-green {
-    @apply inline-block px-8 py-3 text-sm tracking-widest uppercase font-medium transition-all duration-300;
-    background-color: var(--color-green);
-    color: var(--color-off-white);
-    letter-spacing: 0.15em;
-  }
-
-  .btn-accent-green:hover {
-    background-color: var(--color-charcoal);
-    transform: translateY(-2px);
-  }
-
+  /* Navigation Link */
   .nav-link {
     @apply relative text-sm tracking-widest uppercase transition-colors duration-300;
     letter-spacing: 0.2em;
@@ -117,6 +105,7 @@
     width: 100%;
   }
 
+  /* Section Typography */
   .section-title {
     @apply text-4xl md:text-5xl font-serif mb-4;
     letter-spacing: 0.05em;
@@ -124,42 +113,10 @@
 
   .section-subtitle {
     @apply text-sm uppercase tracking-widest mb-8;
-    color: var(--color-green);
     letter-spacing: 0.2em;
   }
 
-  .accent-red {
-    color: var(--color-red);
-  }
-
-  .accent-green {
-    color: var(--color-green);
-  }
-
-  .accent-teal {
-    color: var(--color-teal);
-  }
-
-  .accent-gold {
-    color: var(--color-gold);
-  }
-
-  .bg-brand-charcoal {
-    background-color: var(--color-charcoal);
-  }
-
-  .bg-brand-bone {
-    background-color: var(--color-bone);
-  }
-
-  .bg-brand-green {
-    background-color: var(--color-green);
-  }
-
-  .bg-brand-red {
-    background-color: var(--color-red);
-  }
-
+  /* Animations */
   .fade-in {
     animation: fadeIn 1s ease-out forwards;
   }

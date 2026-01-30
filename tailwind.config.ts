@@ -11,7 +11,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-lato)"],
+        sans: ["var(--font-montserrat)"],
         serif: ["var(--font-playfair)"],
       },
     },

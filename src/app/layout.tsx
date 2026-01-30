@@ -1,10 +1,17 @@
-'use client';
-
 import { Playfair_Display, Montserrat } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import { usePathname } from 'next/navigation';
+import LayoutShell from "@/components/layout/LayoutShell";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: {
+    default: "Cleiri Quezada | Singer & Songwriter",
+    template: "%s | Cleiri Quezada",
+  },
+  description:
+    "Award-winning artist from the Rio Grande Valley, blending Spanish ballads with the soulful sound of mariachi.",
+};
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -23,21 +30,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = usePathname();
-  const isHomePage = pathname === '/';
-
   return (
     <html lang="en">
-      <head>
-        <title>Cleiri Quezada | Singer &amp; Songwriter</title>
-        <meta name="description" content="Award-winning artist from the Rio Grande Valley, blending Spanish ballads with the soulful sound of mariachi." />
-      </head>
       <body
-        className={`${playfair.variable} ${montserrat.variable} bg-[#E7DBCB] font-sans flex flex-col min-h-screen antialiased`}
+        className={`${playfair.variable} ${montserrat.variable} bg-[var(--color-bone)] font-sans flex flex-col min-h-screen antialiased`}
       >
-        {!isHomePage && <Header />}
-        <main className="flex-grow">{children}</main>
-        {!isHomePage && <Footer />}
+        <LayoutShell>{children}</LayoutShell>
       </body>
     </html>
   );

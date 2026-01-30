@@ -3,49 +3,43 @@ import { FaInstagram, FaYoutube, FaSpotify, FaFacebookF, FaTiktok } from 'react-
 
 export default function Footer() {
   return (
-    <footer className="bg-[#2D282C] text-white">
+    <footer className="bg-[var(--color-emerald)] text-[var(--color-bone)]">
       <div className="container mx-auto px-6 py-16">
         <div className="grid md:grid-cols-3 gap-12 items-start">
           {/* Brand */}
           <div>
             <h3 className="font-serif text-2xl mb-4">Cleiri Quezada</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-[var(--color-bone)]/60 text-sm leading-relaxed">
               Award-winning singer and songwriter from the Rio Grande Valley.
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="text-center">
-            <h4 className="text-sm uppercase tracking-widest text-[#2BBCB5] mb-6">Navigate</h4>
+            <h4 className="text-sm uppercase tracking-widest text-[var(--color-gold)] mb-6">Navigate</h4>
             <div className="flex flex-col space-y-3">
-              <Link href="/music" className="text-gray-400 hover:text-white transition-colors text-sm">
+              <Link href="/about" className="text-[var(--color-bone)]/60 hover:text-[var(--color-bone)] transition-colors text-sm">
+                About
+              </Link>
+              <Link href="/music" className="text-[var(--color-bone)]/60 hover:text-[var(--color-bone)] transition-colors text-sm">
                 Music
               </Link>
-              <Link href="/videos" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Videos
-              </Link>
-              <Link href="/photos" className="text-gray-400 hover:text-white transition-colors text-sm">
-                Photos
-              </Link>
-              <Link href="/news" className="text-gray-400 hover:text-white transition-colors text-sm">
-                News
-              </Link>
-              <Link href="/about" className="text-gray-400 hover:text-white transition-colors text-sm">
-                About
+              <Link href="/the-show" className="text-[var(--color-bone)]/60 hover:text-[var(--color-bone)] transition-colors text-sm">
+                The Show
               </Link>
             </div>
           </div>
 
           {/* Social & Contact */}
           <div className="md:text-right">
-            <h4 className="text-sm uppercase tracking-widest text-[#2BBCB5] mb-6">Connect</h4>
+            <h4 className="text-sm uppercase tracking-widest text-[var(--color-gold)] mb-6">Connect</h4>
             <div className="flex md:justify-end space-x-5 mb-6">
               <a
                 href="https://www.instagram.com/cleiriquezada"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="text-gray-400 hover:text-[#A30302] transition-colors"
+                className="text-[var(--color-bone)]/60 hover:text-[var(--color-bone)] transition-colors"
               >
                 <FaInstagram className="text-xl" />
               </a>
@@ -54,7 +48,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
-                className="text-gray-400 hover:text-[#A30302] transition-colors"
+                className="text-[var(--color-bone)]/60 hover:text-[var(--color-bone)] transition-colors"
               >
                 <FaYoutube className="text-xl" />
               </a>
@@ -63,7 +57,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Spotify"
-                className="text-gray-400 hover:text-[#036B59] transition-colors"
+                className="text-[var(--color-bone)]/60 hover:text-[var(--color-bone)] transition-colors"
               >
                 <FaSpotify className="text-xl" />
               </a>
@@ -72,7 +66,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="text-gray-400 hover:text-[#2BBCB5] transition-colors"
+                className="text-[var(--color-bone)]/60 hover:text-[var(--color-bone)] transition-colors"
               >
                 <FaFacebookF className="text-xl" />
               </a>
@@ -81,14 +75,14 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="TikTok"
-                className="text-gray-400 hover:text-[#2BBCB5] transition-colors"
+                className="text-[var(--color-bone)]/60 hover:text-[var(--color-bone)] transition-colors"
               >
                 <FaTiktok className="text-xl" />
               </a>
             </div>
             <a
               href="mailto:music@cleiri.com"
-              className="text-gray-400 hover:text-white transition-colors text-sm"
+              className="text-[var(--color-bone)]/60 hover:text-[var(--color-bone)] transition-colors text-sm"
             >
               music@cleiri.com
             </a>
@@ -96,8 +90,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p className="text-gray-500 text-xs tracking-wide">
+        <div className="border-t border-white/10 mt-12 pt-8 text-center">
+          <p className="text-[var(--color-bone)]/40 text-xs tracking-wide">
             &copy; {new Date().getFullYear()} Cleiri Quezada. All rights reserved.
           </p>
         </div>
