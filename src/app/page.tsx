@@ -48,7 +48,7 @@ export default function Home() {
         {/* Hero Content */}
         <div className="relative z-20 text-center text-[var(--color-bone)] px-6 mt-24">
           <p className="section-subtitle text-[var(--color-bone)] opacity-80 slide-up mb-6">
-            Singer &bull; Songwriter &bull; Musician
+            Singer &bull; Songwriter &bull; Host
           </p>
           <h1 className="font-serif text-5xl md:text-7xl mb-6 fade-in">Cleiri Quezada</h1>
           <p className="text-lg md:text-xl font-light max-w-xl mx-auto mb-10 leading-relaxed opacity-90 slide-up">
