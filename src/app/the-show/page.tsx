@@ -26,9 +26,19 @@ export default function TheShowPage() {
           <p className="text-[var(--color-bone)]/80 text-lg leading-relaxed mb-12">
             A new chapter begins. Stay tuned for an experience that brings you closer to the music, the stories, and the journey.
           </p>
-          <div className="inline-block bg-[var(--color-bone)]/10 border border-[var(--color-bone)]/20 text-[var(--color-bone)] px-10 py-5 rounded-sm">
+          <div className="inline-block bg-[var(--color-bone)]/10 border border-[var(--color-bone)]/20 text-[var(--color-bone)] px-10 py-5 rounded-sm mb-12">
             <p className="text-xs uppercase tracking-widest mb-2 text-[var(--color-bone)]/60">Premieres</p>
             <p className="font-serif text-2xl md:text-3xl">February 18</p>
+          </div>
+          <div className="w-full aspect-video rounded-sm overflow-hidden shadow-2xl">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/videoseries?list=PL2HtmVveDJNPPNIc2xF50mx2TmIpYNaQ4"
+              title="Cleiri The Show Playlist"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
           </div>
         </div>
       </section>
