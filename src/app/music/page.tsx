@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { FaSpotify, FaMusic, FaLink } from 'react-icons/fa';
+import { FaSpotify, FaMusic, FaLink, FaYoutube } from 'react-icons/fa';
 import { BsMusicNote } from 'react-icons/bs';
 
 import type { Metadata } from 'next';
@@ -56,10 +56,24 @@ const videos = [
 
 const discography = [
   {
+    title: 'Huir',
+    year: '2026',
+    type: 'Single',
+    description: 'The newest single, released October 16.',
+    youtube: 'https://youtu.be/70BC2Vp3D00',
+  },
+  {
+    title: 'Besos De Miel (Cumbia Version)',
+    year: '2026',
+    type: 'Single',
+    description: 'A cumbia reimagining of the Grammy-produced single.',
+    youtube: 'https://youtu.be/Dm6ehw62lBo',
+  },
+  {
     title: 'Furia',
     year: '2025',
     type: 'Single',
-    description: 'The latest release showcasing raw emotion and powerful vocals.',
+    description: 'A release showcasing raw emotion and powerful vocals.',
   },
   {
     title: 'Si Dios Me Quita La Vida',
@@ -262,6 +276,16 @@ export default function MusicPage() {
                     </span>
                   </div>
                   <p className="text-[var(--color-charcoal)] text-sm">{release.description}</p>
+                  {release.youtube && (
+                    <a
+                      href={release.youtube}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 mt-3 text-xs uppercase tracking-widest text-[var(--color-emerald)] hover:text-[var(--color-gold)] transition-colors"
+                    >
+                      <FaYoutube /> Watch
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
