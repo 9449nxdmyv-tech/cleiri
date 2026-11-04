@@ -38,28 +38,38 @@ const videos = [
     category: 'Single',
   },
   {
-    id: '5l0s_5mh4jw',
-    title: 'La Distancia - Official Video',
-    category: 'Music Video',
-  },
-  {
     id: 'Dm6ehw62lBo',
     title: 'Besos De Miel (Cumbia Version)',
     category: 'Single',
   },
   {
-    id: 'QQRPpXxIvZI',
-    title: 'Estoy Pensando En Ti',
-    category: 'Music Video',
-  },
-  {
-    id: 'wCkudGBUg-4',
+    id: 'b18A2gU2u4I',
     title: 'Si Dios Me Quita La Vida',
     category: 'Music Video',
   },
   {
+    id: 'wCkudGBUg-4',
+    title: 'Estoy Pensando En Ti',
+    category: 'Music Video',
+  },
+  {
+    id: '5l0s_5mh4jw',
+    title: 'La Distancia',
+    category: 'Music Video',
+  },
+  {
     id: 'Vp8PV0LlUes',
-    title: 'Live Performance',
+    title: 'Besos De Miel',
+    category: 'Music Video',
+  },
+  {
+    id: 'QQRPpXxIvZI',
+    title: 'Ilusiones',
+    category: 'Music Video',
+  },
+  {
+    id: 'O2T-Rg3Nk78',
+    title: 'La Distancia - Live at Sombrero Fest',
     category: 'Live',
   },
 ];
@@ -199,9 +209,9 @@ export default function MusicPage() {
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
             <p className="section-subtitle text-[var(--color-gold)]">Watch</p>
-            <h2 className="text-3xl font-serif text-[var(--color-bone)]">Videos</h2>
+            <h2 className="text-3xl md:text-4xl font-serif text-[var(--color-bone)]">Videos</h2>
           </div>
-          <div className="relative aspect-video rounded-sm overflow-hidden shadow-2xl">
+          <div className="relative aspect-video rounded-sm overflow-hidden shadow-2xl ring-1 ring-[var(--color-bone)]/15">
             <iframe
               className="w-full h-full border-0"
               src={`https://www.youtube.com/embed/${videos[0].id}`}
@@ -212,14 +222,16 @@ export default function MusicPage() {
           </div>
           <div className="mt-6 text-center text-[var(--color-bone)]">
             <span className="text-[var(--color-gold)] text-xs uppercase tracking-widest">{videos[0].category}</span>
-            <h3 className="font-serif text-2xl mt-2">{videos[0].title}</h3>
+            <h3 className="font-serif text-2xl md:text-3xl mt-2">{videos[0].title}</h3>
           </div>
 
+          <div className="w-16 h-px bg-[var(--color-bone)]/30 mx-auto my-12" />
+
           {/* More Videos Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-10">
             {videos.slice(1).map((video) => (
-              <div key={video.id}>
-                <div className="relative aspect-video rounded-sm overflow-hidden shadow-lg">
+              <div key={video.id} className="w-full sm:w-[calc((100%-1.5rem)/2)] md:w-[calc((100%-3rem)/3)]">
+                <div className="relative aspect-video rounded-sm overflow-hidden shadow-lg ring-1 ring-[var(--color-bone)]/15">
                   <iframe
                     className="w-full h-full border-0"
                     src={`https://www.youtube.com/embed/${video.id}`}
