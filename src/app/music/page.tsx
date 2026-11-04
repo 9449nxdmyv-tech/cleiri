@@ -33,9 +33,19 @@ const musicPlatforms = [
 
 const videos = [
   {
+    id: '70BC2Vp3D00',
+    title: 'Huir',
+    category: 'Single',
+  },
+  {
     id: '5l0s_5mh4jw',
     title: 'La Distancia - Official Video',
     category: 'Music Video',
+  },
+  {
+    id: 'Dm6ehw62lBo',
+    title: 'Besos De Miel (Cumbia Version)',
+    category: 'Single',
   },
   {
     id: 'QQRPpXxIvZI',
